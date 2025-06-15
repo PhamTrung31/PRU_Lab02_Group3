@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+﻿using Assets.Code.Scripts.Player.Interface;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, IUpSideDownSkill
 {
     public float moveSpeed = 5f;
     public float jumpForce = 12f;
@@ -17,10 +18,18 @@ public class PlayerMovement : MonoBehaviour
 
     public float uphillMultiplier = 0.5f;
     public float downhillMultiplier = 1.5f;
+
+    private bool isFlipping = false;
+
+    private float flipSpeed = 720f; // Degrees per second
+    private float flipProgress = 0f;
+
+    private Head head;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         bx = GetComponent<BoxCollider2D>();
+        head = GetComponentInChildren<Head>();
     }
 
     private void Update()
@@ -30,6 +39,20 @@ public class PlayerMovement : MonoBehaviour
         if (!IsGround())
         {
             Rotate();
+        }
+
+        if (isFlipping)
+        {
+            float rotateStep = flipSpeed * Time.deltaTime;
+            transform.Rotate(Vector3.forward, rotateStep); // For a 2D flip
+
+            flipProgress += rotateStep;
+            if (flipProgress >= 360f)
+            {
+                isFlipping = false;
+                flipProgress = 0f;
+                transform.rotation = Quaternion.identity; // Optional: reset rotation
+            }
         }
     }
 
@@ -94,6 +117,18 @@ public class PlayerMovement : MonoBehaviour
     private void OnJump()
     {
         jumpBufferCounter = jumpBufferTime;
+    }
+
+    public void OnSkillUpSideDown(InputValue value) {
+        if (value.isPressed && !IsGround() && !isFlipping)
+        {
+            UpsideDown();
+        }
+    }
+
+    public void UpsideDown() {
+        isFlipping = true;
+        flipProgress = 0f;
     }
 
     private void UpdateJumpBuffer()
@@ -161,5 +196,13 @@ public class PlayerMovement : MonoBehaviour
         Vector2 origin = new Vector2(bounds.center.x, bounds.min.y);
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(origin, origin + Vector2.down * rayLength);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Ground"))
+        {
+            head?.OnHeadHitGround();
+        }
     }
 }
