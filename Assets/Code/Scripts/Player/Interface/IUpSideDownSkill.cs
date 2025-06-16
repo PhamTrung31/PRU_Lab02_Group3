@@ -10,5 +10,9 @@ namespace Assets.Code.Scripts.Player.Interface
     public interface IUpSideDownSkill
     {
         public void UpsideDown();
+
+        public void DownSideUp();
+
+        
     }
 }
