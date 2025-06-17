@@ -4,12 +4,14 @@
 TagManager:
   serializedVersion: 3
   tags:
+  - Head
+  - Ground
   - Collectible
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 
