@@ -32,6 +32,21 @@ public class PlayerMovement : MonoBehaviour, IUpSideDownSkill
     public float dashCooldown = 2f;
     public float dashDuration = 0.3f;
     public float dashSpeed = 20f;
+    [Header("Score Variables")]
+    public int trickScore = 100;
+    private bool wasTricking = false;
+    public float speedScoreInterval = 0.1f;
+    public float speedThreshold = 10f;
+    public float speedMultiplier = 1.5f;
+    public float speedTimer = 0f;
+    [Header("Trick Multiplier")]
+    public int currentMultiplier = 1;
+    public int maxMultiplier = 5;
+    public float trickResetTime = 2f;
+    private float trickTimer = 0f;
+
+    [Header("Inspector")]
+    public float currentSpeed;
 
     public SurfaceEffector2D surfaceEffector;
     private Head head;
@@ -50,6 +65,16 @@ public class PlayerMovement : MonoBehaviour, IUpSideDownSkill
         {
             Rotate();
         }
+        if (currentMultiplier > 1)
+        {
+            trickTimer += Time.deltaTime;
+            if (trickTimer > trickResetTime)
+            {
+                currentMultiplier = 1;
+                trickTimer = 0f;
+                ScoreManager.Instance.SetMultiplier(currentMultiplier); // Reset HUD
+            }
+        }
 
         if (isFlipping)
         {
@@ -63,14 +88,32 @@ public class PlayerMovement : MonoBehaviour, IUpSideDownSkill
             {
                 isFlipping = false;
                 flipProgress = 0f;
-                transform.rotation = Quaternion.identity; // Optional: reset rotation
+                transform.rotation = Quaternion.identity; // Optional: reset rotation\
+                if (wasTricking)
+                {
+                    int scoreToAdd = trickScore * currentMultiplier;
+                    ScoreManager.Instance.AddScore(scoreToAdd);
+
+                    // tăng multiplier nếu chưa đến max
+                    if (currentMultiplier < maxMultiplier)
+                    {
+                        currentMultiplier++;
+                        ScoreManager.Instance.SetMultiplier(currentMultiplier);
+                    }
+
+
+                    trickTimer = 0f;
+                    wasTricking = false;
+                }
             }
+
         }
     }
 
     private void FixedUpdate()
     {
-        if (!isDashing) {
+        if (!isDashing)
+        {
             Run();
 
             if (IsGround() && jumpBufferCounter > 0)
@@ -78,6 +121,17 @@ public class PlayerMovement : MonoBehaviour, IUpSideDownSkill
                 Jump();
                 jumpBufferCounter = 0;
             }
+        }
+        speedTimer += Time.fixedDeltaTime;
+        if (speedTimer >= speedScoreInterval)
+        {
+            currentSpeed = rb.linearVelocity.magnitude;
+            if (currentSpeed > speedThreshold)
+            {
+                int speedScore = Mathf.RoundToInt((currentSpeed - speedThreshold) * speedMultiplier);
+                ScoreManager.Instance.AddScore(speedScore);
+            }
+            speedTimer = 0f;
         }
     }
 
@@ -126,7 +180,8 @@ public class PlayerMovement : MonoBehaviour, IUpSideDownSkill
         jumpBufferCounter = jumpBufferTime;
     }
 
-    public void OnSkillUpSideDown(InputValue value) {
+    public void OnSkillUpSideDown(InputValue value)
+    {
         if (value.isPressed && !IsGround() && !isFlipping)
         {
             UpsideDown();
@@ -146,6 +201,7 @@ public class PlayerMovement : MonoBehaviour, IUpSideDownSkill
         isFlipping = true;
         flipProgress = 0f;
         targetAngle = 360f;
+        wasTricking = true;
     }
 
     // Press E to flip 360° counter-clockwise
@@ -154,6 +210,7 @@ public class PlayerMovement : MonoBehaviour, IUpSideDownSkill
         isFlipping = true;
         flipProgress = 0f;
         targetAngle = -360f;
+        wasTricking = true;
     }
 
     private void UpdateJumpBuffer()

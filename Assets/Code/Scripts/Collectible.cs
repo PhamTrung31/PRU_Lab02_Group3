@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
-    public int scoreValue = 10;
+    public int scoreValue = 50;
 
     void OnTriggerEnter(Collider other)
     {
