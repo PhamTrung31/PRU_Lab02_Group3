@@ -9,6 +9,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\assets\\code\\scripts\\player\\head.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\scripts\\player\\head.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|c:\\users\\acer\\desktop\\123\\cn7\\pru212-1\\lab2\\pru_lab02_group3\\assets\\code\\scripts\\crashdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\scripts\\crashdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -87,6 +91,17 @@
               "ViewState": "AgIAAFYAAAAAAAAAAAAiwGYAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-12T13:14:14.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "Title": "CrashDetector.cs",
+              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\123\\Cn7\\PRU212-1\\Lab2\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\CrashDetector.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\Scripts\\CrashDetector.cs",
+              "ToolTip": "C:\\Users\\acer\\Desktop\\123\\Cn7\\PRU212-1\\Lab2\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\CrashDetector.cs",
+              "RelativeToolTip": "Assets\\Code\\Scripts\\CrashDetector.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T05:46:13.825Z",
               "EditorCaption": ""
             }
           ]
