@@ -1,22 +1,18 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Head : MonoBehaviour
 {
-    private bool isDead = false;
-
-    public void Die()
+    [SerializeField] float loadDelay = 1f;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (isDead) return;
-
-        isDead = true;
-        Debug.Log("Player Died: Hit head on ground");
-
-        // Add death logic here (animation, disable movement, game over, etc.)
+        if (collision.tag == "Ground")
+        {
+            Invoke("ReloadScene", loadDelay);
+        }
     }
-
-    // This will be called by the HeadTrigger script
-    public void OnHeadHitGround()
+    void ReloadScene()
     {
-        Die();
+        SceneManager.LoadScene(0);
     }
 }
