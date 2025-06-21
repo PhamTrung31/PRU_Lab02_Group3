@@ -18,7 +18,7 @@ public class SpeedScorer : MonoBehaviour
         if (timer >= checkInterval)
         {
             float speed = rb.linearVelocity.magnitude;
-            ScoreManager.Instance.AddSpeedScore(speed);
+            //ScoreManager.Instance.AddSpeedScore(speed);
             timer = 0f;
         }
     }
