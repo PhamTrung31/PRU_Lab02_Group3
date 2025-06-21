@@ -9,12 +9,18 @@ public class DustTrail : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other) 
     {
-        trailEffect.Play();    
+        if(other.gameObject.tag == "Ground") 
+        {
+            trailEffect.Play();
+        }
     }
 
     void OnCollisionExit2D(Collision2D other) 
     {
-        trailEffect.Stop(); 
+        if (other.gameObject.tag == "Ground")
+        {
+            trailEffect.Stop();
+        }
     }
 
 }
