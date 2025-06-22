@@ -5,26 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Head : MonoBehaviour
 {
-    [SerializeField] float loadDelay = 0.5f;
-
-    [SerializeField] ParticleSystem crashEffect;
-
-    bool hasCrashed = false;
-
-    [SerializeField] AudioClip crashSFX;
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.tag == "Ground" && !hasCrashed)
+        if (other.CompareTag("Ground"))
         {
-            hasCrashed = true;
-            crashEffect.Play();
-            GetComponent<AudioSource>().PlayOneShot(crashSFX);
-            Invoke("ReloadScene", loadDelay);
+            CrashHandler.Instance.TriggerCrash();
         }
-    }
-    void ReloadScene()
-    {
-        SceneManager.LoadScene(0);
     }
 }

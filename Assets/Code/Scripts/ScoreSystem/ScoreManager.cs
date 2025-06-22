@@ -2,12 +2,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+[DefaultExecutionOrder(-100)]
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance;
     public int score = 0;
     public TMP_Text scoreText;
     public TMP_Text multiplierText;
+    public CanvasGroup multiplierGroup;
+
     public int currentMultiplier = 1;
     public int highScore = 0;
     public TMP_Text highScoreText;
@@ -15,13 +18,20 @@ public class ScoreManager : MonoBehaviour
     void Awake()
     {
         if (Instance == null)
+        {
             Instance = this;
+        }
         else
+        {
             Destroy(gameObject);
+        }
 
-        LoadScore();
-        highScore = PlayerPrefs.GetInt("HighScore", 0);
-        UpdateHighScoreText();
+        if (multiplierGroup != null)
+        {
+            multiplierGroup.alpha = 0f;
+            multiplierGroup.interactable = false;
+            multiplierGroup.blocksRaycasts = false;
+        }
     }
 
     public void AddScore(int amount)
@@ -34,6 +44,7 @@ public class ScoreManager : MonoBehaviour
     {
         currentMultiplier = multiplier;
         UpdateMultiplierText();
+        FadeMultiplier(currentMultiplier > 1);
     }
 
     void UpdateScoreText()
@@ -48,17 +59,19 @@ public class ScoreManager : MonoBehaviour
             multiplierText.text = "Trick multiplier: x" + currentMultiplier;
     }
 
-    public void SaveScore()
+    void FadeMultiplier(bool show)
     {
-        PlayerPrefs.SetInt("HighScore", score);
-        PlayerPrefs.Save();
-    }
-    public void LoadScore()
-    {
-        score = PlayerPrefs.GetInt("HighScore", 0);
-        UpdateScoreText();
+        if (multiplierGroup == null) return;
+
+        multiplierGroup.alpha = show ? 1f : 0f;
+        multiplierGroup.interactable = show;
+        multiplierGroup.blocksRaycasts = show;
     }
 
+    public void AddTrickScore(int amount)
+    {
+        AddScore(amount);
+    }
 
     public void CheckAndSaveHighScore()
     {
@@ -77,6 +90,15 @@ public class ScoreManager : MonoBehaviour
             highScoreText.text = "High Score: " + highScore;
     }
 
+    public void SaveScore()
+    {
+        PlayerPrefs.SetInt("HighScore", score);
+        PlayerPrefs.Save();
+    }
 
+    public void LoadScore()
+    {
+        score = PlayerPrefs.GetInt("HighScore", 0);
+        UpdateScoreText();
+    }
 }
-

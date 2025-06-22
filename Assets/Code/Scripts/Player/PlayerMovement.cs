@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float jumpForce = 12f;
+    public float jumpForce = 5f;
     public float jumpBufferTime = 0.2f;
     public LayerMask groundLayer;
-    public float rotationSpeed = 200f;
+    public float rotationSpeed = 500f;
 
     [SerializeField] private Rigidbody2D rb;
     private CapsuleCollider2D cap;
@@ -44,9 +45,22 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float slideBackForce = 2f; // lực đẩy ngược lại
     [SerializeField] private float stopThreshold = 0.1f; // nếu tốc độ quá nhỏ
 
-    [SerializeField] private TrailRenderer trail;
-
     private Head head;
+
+    private bool isFlipping = false;
+
+    private float flipSpeed = 400f; // Degrees per second
+    private float flipProgress = 0f;
+    private float targetAngle = 360f;// Can be -360 or 360 depending on skill
+
+    private float manualFlipAngle = 0f;
+    private float lastZRotation = 0f;
+    private bool wasGrounded = true; // để reset khi vừa rời mặt đất
+
+    private int tricksPerformed = 0;
+
+    private bool isGrounded = false;
+    private bool previousIsGrounded = true;
 
     private void Awake()
     {
@@ -59,22 +73,25 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         UpdateJumpBuffer();
-        bool isGrounded = IsGround();
+
         if (!isGrounded)
         {
             Rotate();
         }
-        if (currentMultiplier > 1)
+
+        // Reset multiplier sau một khoảng thời gian nếu đang ở trên mặt đất và không làm trick
+        if (currentMultiplier > 1 && isGrounded && !isFlipping)
         {
             trickTimer += Time.deltaTime;
             if (trickTimer > trickResetTime)
             {
                 currentMultiplier = 1;
                 trickTimer = 0f;
-                ScoreManager.Instance.SetMultiplier(currentMultiplier); // Reset HUD
+                ScoreManager.Instance.SetMultiplier(currentMultiplier);
             }
         }
 
+        // Xử lý flip tự động (Q/E)
         if (isFlipping)
         {
             float rotateStep = flipSpeed * Time.deltaTime;
@@ -87,25 +104,102 @@ public class PlayerMovement : MonoBehaviour
             {
                 isFlipping = false;
                 flipProgress = 0f;
-                transform.rotation = Quaternion.identity; // Optional: reset rotation\
+                transform.rotation = Quaternion.identity;
+
                 if (wasTricking)
                 {
-                    int scoreToAdd = trickScore * currentMultiplier;
-                    ScoreManager.Instance.AddScore(scoreToAdd);
+                    tricksPerformed += 1;
 
-                    // tăng multiplier nếu chưa đến max
                     if (currentMultiplier < maxMultiplier)
                     {
                         currentMultiplier++;
-                        ScoreManager.Instance.SetMultiplier(currentMultiplier);
                     }
-
-
+                    ScoreManager.Instance.SetMultiplier(currentMultiplier);
                     trickTimer = 0f;
                     wasTricking = false;
                 }
             }
+        }
 
+        // Manual flip tracking (A/D xoay tay) - chỉ khi đang bay
+        if (!isGrounded)
+        {
+            float currentZRotation = transform.eulerAngles.z;
+            float deltaAngle = Mathf.DeltaAngle(lastZRotation, currentZRotation);
+            manualFlipAngle += deltaAngle;
+            lastZRotation = currentZRotation;
+
+            int fullFlips = 0;
+            while (Mathf.Abs(manualFlipAngle) >= 360f)
+            {
+                fullFlips++;
+                manualFlipAngle -= 360f * Mathf.Sign(manualFlipAngle);
+            }
+
+            if (fullFlips > 0)
+            {
+                tricksPerformed += fullFlips;
+                // Update multiplier
+                for (int i = 0; i < fullFlips; i++)
+                {
+                    if (currentMultiplier < maxMultiplier)
+                    {
+                        currentMultiplier++;
+                    }
+                }
+                ScoreManager.Instance.SetMultiplier(currentMultiplier);
+                trickTimer = 0f;
+            }
+        }
+        else
+        {
+            // Reset manual flip tracking khi chạm đất
+            if (!previousIsGrounded)
+            {
+                manualFlipAngle = 0f;
+                lastZRotation = transform.eulerAngles.z;
+            }
+        }
+
+        // Kiểm tra khi vừa tiếp đất
+        if (!previousIsGrounded && isGrounded)
+        {
+
+            // Tính điểm trick khi tiếp đất
+            if (tricksPerformed > 0)
+            {
+                // Tính điểm cơ bản cho trick
+                int trickBaseScore = trickScore * tricksPerformed;
+
+                // Tính bonus từ multiplier
+                int currentScore = ScoreManager.Instance.score;
+                int multiplierBonus = Mathf.RoundToInt(currentScore * (currentMultiplier - 1) * 0.1f);
+
+                // Cộng điểm
+                ScoreManager.Instance.AddTrickScore(trickBaseScore);
+                if (multiplierBonus > 0)
+                {
+                    ScoreManager.Instance.AddTrickScore(multiplierBonus);
+                }
+            }
+
+            // Reset trick counter và multiplier
+            tricksPerformed = 0;
+            currentMultiplier = 1;
+            trickTimer = 0f;
+            ScoreManager.Instance.SetMultiplier(currentMultiplier);
+        }
+
+        // Cập nhật trạng thái frame trước
+        previousIsGrounded = isGrounded;
+
+        if (!isDashing)
+        {
+            if (isGrounded && jumpBufferCounter > 0)
+            {
+                Jump();
+                jumpBufferCounter = 0;
+            }
         }
     }
 
@@ -115,16 +209,13 @@ public class PlayerMovement : MonoBehaviour
         {
             Run();
 
-            bool isGrounded = IsGround();
-
-            if (isGrounded && jumpBufferCounter > 0)
-            {
-                Jump();
-                jumpBufferCounter = 0;
-            }
-
-            
+            //if (isGrounded && jumpBufferCounter > 0)
+            //{
+            //    Jump();
+            //    jumpBufferCounter = 0;
+            //}
         }
+
         speedTimer += Time.fixedDeltaTime;
         if (speedTimer >= speedScoreInterval)
         {
@@ -185,7 +276,7 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
     }
 
-    private void OnJump()
+    public void OnJump(InputValue value)
     {
         jumpBufferCounter = jumpBufferTime;
         isJumping = true;
@@ -197,10 +288,10 @@ public class PlayerMovement : MonoBehaviour
         if (rb.linearVelocity.y > 0)
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f); // cut jump short
     }
-    
+
     public void OnSkillUpSideDown(InputValue value)
     {
-        if (value.isPressed && !IsGround() && !isFlipping)
+        if (value.isPressed && !isGrounded && !isFlipping)
         {
             UpsideDown();
         }
@@ -208,11 +299,12 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnSkillDownSideUp(InputValue value)
     {
-        if (value.isPressed && !IsGround() && !isFlipping)
+        if (value.isPressed && !isGrounded && !isFlipping)
         {
             DownSideUp();
         }
     }
+
     // Press Q to flip 360° clockwise
     public void UpsideDown()
     {
@@ -251,7 +343,6 @@ public class PlayerMovement : MonoBehaviour
         canDash = false;
         isDashing = true;
 
-        trail.emitting = true;
 
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
@@ -268,7 +359,6 @@ public class PlayerMovement : MonoBehaviour
 
         rb.gravityScale = originalGravity;
         isDashing = false;
-        trail.emitting = false;
 
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
@@ -292,27 +382,21 @@ public class PlayerMovement : MonoBehaviour
         return dashDir.normalized;
     }
 
-    private bool IsGround()
+    // Trigger events để detect ground collision
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        float rayLength = 0.1f;
-        Vector2 origin = transform.position;
+        if (((1 << other.gameObject.layer) & groundLayer) != 0)
+        {
+            isGrounded = true;
+        }
+    }
 
-        // Hướng raycast phải theo hướng -transform.up vì nhân vật có thể bị xoay
-        Vector2 down = -transform.up;
-
-        // Các điểm raycast lệch sang trái và phải
-        Vector2 left = origin + (Vector2)(-transform.right * 0.3f);
-        Vector2 right = origin + (Vector2)(transform.right * 0.3f);
-
-        Debug.DrawRay(origin, down * rayLength, Color.green);
-        Debug.DrawRay(left, down * rayLength, Color.red);
-        Debug.DrawRay(right, down * rayLength, Color.red);
-
-        bool centerHit = Physics2D.Raycast(origin, down, rayLength, groundLayer);
-        bool leftHit = Physics2D.Raycast(left, down, rayLength, groundLayer);
-        bool rightHit = Physics2D.Raycast(right, down, rayLength, groundLayer);
-
-        return centerHit || leftHit || rightHit;
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (((1 << other.gameObject.layer) & groundLayer) != 0)
+        {
+            isGrounded = false;
+        }
     }
 
     private Vector2 GetGroundNormal()
@@ -340,13 +424,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Rotate()
     {
-        if (IsGround()) return;
-
-        Debug.Log($"On ground: {IsGround()}");
+        if (isGrounded) return;
         float torque = -rotationSpeed * rotateInput.x;
         rb.AddTorque(torque);
         rb.angularVelocity = Mathf.Clamp(rb.angularVelocity, -60f, 60f);
-
     }
 
     public void OnRotate(InputValue value)
