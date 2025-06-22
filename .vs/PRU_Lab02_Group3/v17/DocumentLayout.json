@@ -41,6 +41,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\assets\\code\\scripts\\finishline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\scripts\\finishline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\pru_lab02_group3\\assets\\code\\scripts\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\scripts\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\assets\\code\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -119,7 +127,17 @@
               "RelativeToolTip": "Assets\\Code\\Scripts\\Crash\\CrashHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T14:22:16.321Z",
+              "WhenOpened": "2025-06-22T14:22:16.321Z"
+            },
+            {
+              "Title": "MenuController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\MenuController.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\Scripts\\MenuController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\MenuController.cs",
+              "RelativeToolTip": "Assets\\Code\\Scripts\\MenuController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwCYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T18:09:04.899Z",
               "EditorCaption": ""
             },
             {
@@ -218,6 +236,16 @@
               "ViewState": "AgIAAP8AAAAAAAAAAAAWwBEBAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-12T13:14:14.608Z"
+            },
+            {
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\MainMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\Scripts\\MainMenu.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\MainMenu.cs",
+              "RelativeToolTip": "Assets\\Code\\Scripts\\MainMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T18:08:29.73Z"
             }
           ]
         }
