@@ -71,6 +71,7 @@
     <Compile Include="Assets\Code\Scripts\Collectible.cs" />
     <Compile Include="Assets\Code\Scripts\Menu\MainMenu.cs" />
     <Compile Include="Assets\Code\Scripts\Finish&amp;Crash\Crash\CrashRock.cs" />
+    <Compile Include="Assets\Code\Scripts\Menu\PauseManager.cs" />
     <Compile Include="Assets\Code\Scripts\ScoreSystem\LeaderboardManager.cs" />
     <Compile Include="Assets\Code\Scripts\Player\Interface\IUpSideDownSkill.cs" />
     <Compile Include="Assets\Code\Scripts\Finish&amp;Crash\Crash\CrashHandler.cs" />

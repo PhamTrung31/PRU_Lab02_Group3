@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\pru_lab02_group3\\assets\\code\\scripts\\finish\u0026crash\\crash\\crashhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\scripts\\finish\u0026crash\\crash\\crashhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\assets\\code\\scripts\\finish\u0026crash\\crash\\head.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\scripts\\finish\u0026crash\\crash\\head.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\assets\\code\\scripts\\menu\\leaderboardmenumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\scripts\\menu\\leaderboardmenumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\assets\\code\\scripts\\finish\u0026crash\\finish\\finishline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\scripts\\finish\u0026crash\\finish\\finishline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\assets\\code\\scripts\\finish\u0026crash\\crash\\crashdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\scripts\\finish\u0026crash\\crash\\crashdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,27 +27,15 @@
       "RelativeMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\scripts\\finish\u0026crash\\crash\\crashrock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\assets\\code\\scripts\\finish\u0026crash\\crash\\crashhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\scripts\\finish\u0026crash\\crash\\crashhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\assets\\code\\scripts\\menu\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\scripts\\menu\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\pru_lab02_group3\\assets\\code\\scripts\\menu\\leaderboardmenumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\scripts\\menu\\leaderboardmenumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\pru_lab02_group3\\assets\\code\\scripts\\finish\u0026crash\\finish\\finishline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\scripts\\finish\u0026crash\\finish\\finishline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\assets\\code\\scripts\\scoresystem\\scoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\scripts\\scoresystem\\scoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\pru_lab02_group3\\assets\\code\\scripts\\scoresystem\\leaderboardmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\assets\\code\\scripts\\scoresystem\\leaderboardmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\scripts\\scoresystem\\leaderboardmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -42,34 +46,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 11,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LeaderboardManager.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\ScoreSystem\\LeaderboardManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Scripts\\ScoreSystem\\LeaderboardManager.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\ScoreSystem\\LeaderboardManager.cs",
-              "RelativeToolTip": "Assets\\Code\\Scripts\\ScoreSystem\\LeaderboardManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T23:36:15.176Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LeaderboardMenuManager.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\Menu\\LeaderboardMenuManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Scripts\\Menu\\LeaderboardMenuManager.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\Menu\\LeaderboardMenuManager.cs",
-              "RelativeToolTip": "Assets\\Code\\Scripts\\Menu\\LeaderboardMenuManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T23:08:38.586Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{c9c0ae26-aa77-11d2-b3f0-0000f87570ee}"
@@ -116,20 +94,69 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
+              "Title": "CrashHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\Finish\u0026Crash\\Crash\\CrashHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\Scripts\\Finish\u0026Crash\\Crash\\CrashHandler.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\Finish\u0026Crash\\Crash\\CrashHandler.cs",
+              "RelativeToolTip": "Assets\\Code\\Scripts\\Finish\u0026Crash\\Crash\\CrashHandler.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T02:28:35.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Head.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\Finish\u0026Crash\\Crash\\Head.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\Scripts\\Finish\u0026Crash\\Crash\\Head.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\Finish\u0026Crash\\Crash\\Head.cs",
+              "RelativeToolTip": "Assets\\Code\\Scripts\\Finish\u0026Crash\\Crash\\Head.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T02:21:41.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LeaderboardManager.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\ScoreSystem\\LeaderboardManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\Scripts\\ScoreSystem\\LeaderboardManager.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\ScoreSystem\\LeaderboardManager.cs",
+              "RelativeToolTip": "Assets\\Code\\Scripts\\ScoreSystem\\LeaderboardManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T23:36:15.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LeaderboardMenuManager.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\Menu\\LeaderboardMenuManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Code\\Scripts\\Menu\\LeaderboardMenuManager.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\Menu\\LeaderboardMenuManager.cs",
+              "RelativeToolTip": "Assets\\Code\\Scripts\\Menu\\LeaderboardMenuManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T23:08:38.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "FinishLine.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\Finish\u0026Crash\\Finish\\FinishLine.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Scripts\\Finish\u0026Crash\\Finish\\FinishLine.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\Finish\u0026Crash\\Finish\\FinishLine.cs",
               "RelativeToolTip": "Assets\\Code\\Scripts\\Finish\u0026Crash\\Finish\\FinishLine.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T21:55:02.448Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-22T21:55:02.448Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "CrashDetector.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\Finish\u0026Crash\\Crash\\CrashDetector.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Scripts\\Finish\u0026Crash\\Crash\\CrashDetector.cs",
@@ -137,12 +164,11 @@
               "RelativeToolTip": "Assets\\Code\\Scripts\\Finish\u0026Crash\\Crash\\CrashDetector.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T21:53:30.561Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-22T21:53:30.561Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ScoreManager.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\ScoreSystem\\ScoreManager.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Scripts\\ScoreSystem\\ScoreManager.cs",
@@ -150,12 +176,11 @@
               "RelativeToolTip": "Assets\\Code\\Scripts\\ScoreSystem\\ScoreManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T21:52:04.574Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-22T21:52:04.574Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "CrashRock.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\Finish\u0026Crash\\Crash\\CrashRock.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Scripts\\Finish\u0026Crash\\Crash\\CrashRock.cs",
@@ -163,34 +188,19 @@
               "RelativeToolTip": "Assets\\Code\\Scripts\\Finish\u0026Crash\\Crash\\CrashRock.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAACDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T21:50:10.895Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-22T21:50:10.895Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CrashHandler.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\Finish\u0026Crash\\Crash\\CrashHandler.cs",
-              "RelativeDocumentMoniker": "Assets\\Code\\Scripts\\Finish\u0026Crash\\Crash\\CrashHandler.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\Finish\u0026Crash\\Crash\\CrashHandler.cs",
-              "RelativeToolTip": "Assets\\Code\\Scripts\\Finish\u0026Crash\\Crash\\CrashHandler.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T21:49:57.664Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "MenuController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\Menu\\MenuController.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Scripts\\Menu\\MenuController.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\Menu\\MenuController.cs",
               "RelativeToolTip": "Assets\\Code\\Scripts\\Menu\\MenuController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAuwBMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T21:36:01.19Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-22T21:36:01.19Z"
             }
           ]
         }

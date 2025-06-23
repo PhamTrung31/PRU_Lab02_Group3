@@ -13,9 +13,15 @@ public class CrashHandler : MonoBehaviour
     private void Awake()
     {
         if (Instance == null)
+        {
             Instance = this;
+            Debug.Log("CrashHandler initialized");
+        }
         else
+        {
+            Debug.LogWarning("Duplicate CrashHandler destroyed");
             Destroy(gameObject);
+        }
     }
 
     public void TriggerCrash()
