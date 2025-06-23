@@ -61,8 +61,25 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.1.4f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Code\Scripts\MainMenu.cs" />
-    <Compile Include="Assets\Code\Scripts\MenuController.cs" />
+    <Compile Include="Assets\Code\Scripts\Menu\MenuController.cs" />
+    <Compile Include="Assets\Code\Scripts\Menu\LeaderboardMenuManager.cs" />
+    <Compile Include="Assets\Code\Scripts\DustTrail.cs" />
+    <Compile Include="Assets\Code\Scripts\ScoreSystem\SpeedScorer.cs" />
+    <Compile Include="Assets\Code\Scripts\Finish&amp;Crash\Crash\CrashDetector.cs" />
+    <Compile Include="Assets\Code\Scripts\Finish&amp;Crash\Crash\Head.cs" />
+    <Compile Include="Assets\Code\Scripts\InGameUIControl\GameOverUIManager.cs" />
+    <Compile Include="Assets\Code\Scripts\Collectible.cs" />
+    <Compile Include="Assets\Code\Scripts\Menu\MainMenu.cs" />
+    <Compile Include="Assets\Code\Scripts\Finish&amp;Crash\Crash\CrashRock.cs" />
+    <Compile Include="Assets\Code\Scripts\ScoreSystem\LeaderboardManager.cs" />
+    <Compile Include="Assets\Code\Scripts\Player\Interface\IUpSideDownSkill.cs" />
+    <Compile Include="Assets\Code\Scripts\Finish&amp;Crash\Crash\CrashHandler.cs" />
+    <Compile Include="Assets\Code\Scripts\FollowCamera.cs" />
+    <Compile Include="Assets\Code\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Code\Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Code\Scripts\ScoreSystem\TrickScorer.cs" />
+    <Compile Include="Assets\Code\Scripts\ScoreSystem\ScoreManager.cs" />
+    <Compile Include="Assets\Code\Scripts\Finish&amp;Crash\Finish\FinishLine.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -1108,6 +1125,10 @@
       <Project>{7E07671A-5D8E-C63D-C945-0B0A64104429}</Project>
       <Name>Unity.2D.IK.Runtime</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Cinemachine.Editor.csproj">
+      <Project>{B1332980-5B81-82C7-5535-EDBBB7E32925}</Project>
+      <Name>Unity.Cinemachine.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.2D.SpriteShape.Runtime.csproj">
       <Project>{37292058-3BFC-01C6-4EE0-E635B42EA9F2}</Project>
       <Name>Unity.2D.SpriteShape.Runtime</Name>
@@ -1152,6 +1173,10 @@
       <Project>{9EC46A78-FE2D-0B1E-493A-00C0E78612E4}</Project>
       <Name>Unity.Multiplayer.Center.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Splines.csproj">
+      <Project>{03FE3038-2EF4-E534-9D0A-ACDB90118A00}</Project>
+      <Name>Unity.Splines</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.Editor.csproj">
       <Project>{2264E9F0-3D13-CA30-D45E-056749DB386A}</Project>
       <Name>Unity.Mathematics.Editor</Name>
@@ -1159,6 +1184,10 @@
     <ProjectReference Include="Unity.RenderPipelines.GPUDriven.Runtime.csproj">
       <Project>{FDC9BDF9-A99D-3678-B971-FB5D1ED5BD43}</Project>
       <Name>Unity.RenderPipelines.GPUDriven.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Cinemachine.csproj">
+      <Project>{F8053A7A-6470-2D39-D2A3-83F07DCB594D}</Project>
+      <Name>Unity.Cinemachine</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.InternalAPIEditorBridge.001.csproj">
       <Project>{DD76D700-A4DA-EA94-FF0E-19AAC090B745}</Project>
@@ -1195,6 +1224,10 @@
     <ProjectReference Include="Unity.RenderPipelines.Universal.Config.Runtime.csproj">
       <Project>{571DB074-6303-B8BC-3919-FDAE69ED40C6}</Project>
       <Name>Unity.RenderPipelines.Universal.Config.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Splines.Editor.csproj">
+      <Project>{49A202A1-7D5C-6EFE-51ED-06D089425299}</Project>
+      <Name>Unity.Splines.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Aseprite.Common.csproj">
       <Project>{CD27FA5E-C6A7-0BD0-D3D2-83FCE13B8354}</Project>
@@ -1263,6 +1296,10 @@
     <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
       <Project>{750E5C5D-1B8F-2FD7-CB6C-0365E7965BFD}</Project>
       <Name>Unity.RenderPipelines.Core.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Settings.Editor.csproj">
+      <Project>{71397940-AB52-1EB8-2D20-CC958E23888A}</Project>
+      <Name>Unity.Settings.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
       <Project>{36C640D2-F4CB-0205-CDA4-42CD6CE14ADE}</Project>

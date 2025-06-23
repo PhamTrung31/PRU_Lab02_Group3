@@ -47,6 +47,16 @@ public class ScoreManager : MonoBehaviour
         FadeMultiplier(currentMultiplier > 1);
     }
 
+    public string GetScoreText()
+    {
+        return "Score: " + score;
+    }
+
+    public int GetScoreForSave()
+    {
+        return score;
+    }
+
     void UpdateScoreText()
     {
         if (scoreText != null)
