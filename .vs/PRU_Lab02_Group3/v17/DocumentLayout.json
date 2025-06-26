@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\assets\\code\\scripts\\finish\u0026crash\\finish\\finishline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\scripts\\finish\u0026crash\\finish\\finishline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\pru_lab02_group3\\assets\\code\\scripts\\menu\\pausemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\scripts\\menu\\pausemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|c:\\users\\user\\desktop\\pru_lab02_group3\\assets\\code\\scripts\\finish\u0026crash\\crash\\crashhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\assets\\code\\scripts\\finish\u0026crash\\crash\\crashhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\scripts\\finish\u0026crash\\crash\\crashhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\assets\\code\\scripts\\menu\\leaderboardmenumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\scripts\\menu\\leaderboardmenumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\assets\\code\\scripts\\finish\u0026crash\\finish\\finishline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|solutionrelative:assets\\code\\scripts\\finish\u0026crash\\finish\\finishline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F32116E4-600E-8EA7-3736-A7A5EF3B7755}|Assembly-CSharp.csproj|C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\assets\\code\\scripts\\finish\u0026crash\\crash\\crashdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 16,
           "Children": [
             {
               "$type": "Bookmark",
@@ -98,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PauseManager.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\Menu\\PauseManager.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Scripts\\Menu\\PauseManager.cs",
@@ -111,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CrashHandler.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\Finish\u0026Crash\\Crash\\CrashHandler.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Scripts\\Finish\u0026Crash\\Crash\\CrashHandler.cs",
@@ -119,12 +119,11 @@
               "RelativeToolTip": "Assets\\Code\\Scripts\\Finish\u0026Crash\\Crash\\CrashHandler.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T02:28:35.953Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-23T02:28:35.953Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Head.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\Finish\u0026Crash\\Crash\\Head.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Scripts\\Finish\u0026Crash\\Crash\\Head.cs",
@@ -148,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "LeaderboardMenuManager.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\Menu\\LeaderboardMenuManager.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Scripts\\Menu\\LeaderboardMenuManager.cs",
@@ -160,15 +159,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "FinishLine.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\Finish\u0026Crash\\Finish\\FinishLine.cs",
               "RelativeDocumentMoniker": "Assets\\Code\\Scripts\\Finish\u0026Crash\\Finish\\FinishLine.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\PRU_Lab02_Group3\\Assets\\Code\\Scripts\\Finish\u0026Crash\\Finish\\FinishLine.cs",
               "RelativeToolTip": "Assets\\Code\\Scripts\\Finish\u0026Crash\\Finish\\FinishLine.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T21:55:02.448Z"
+              "WhenOpened": "2025-06-22T21:55:02.448Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
